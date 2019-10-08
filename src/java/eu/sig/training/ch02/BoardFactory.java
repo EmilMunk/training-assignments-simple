@@ -9,6 +9,12 @@ public class BoardFactory {
 
         int width = board.getWidth();
         int height = board.getHeight();
+        createBoardDirections(grid, width, height)
+        return board;
+    }
+    // end::createBoard[]
+
+    private Square[][] createBoardDirections(Square[][] grid, int width, int height){
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 Square square = grid[x][y];
@@ -20,10 +26,8 @@ public class BoardFactory {
                 }
             }
         }
-
-        return board;
+        return grid;
     }
-    // end::createBoard[]
 }
 
 class Board {
