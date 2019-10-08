@@ -1,7 +1,7 @@
 package eu.sig.training.ch02;
 
 public class BoardFactory {
-    // tag::createBoard[]
+    
     public Board createBoard(Square[][] grid) {
         assert grid != null;
 
@@ -12,7 +12,7 @@ public class BoardFactory {
         createBoardDirections(grid, width, height);
         return board;
     }
-    // end::createBoard[]
+
 
     private Square[][] createBoardDirections(Square[][] grid, int width, int height){
         for (int x = 0; x < width; x++) {

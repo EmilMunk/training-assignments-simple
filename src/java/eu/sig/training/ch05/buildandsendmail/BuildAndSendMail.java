@@ -1,7 +1,6 @@
 package eu.sig.training.ch05.buildandsendmail;
 
 public class BuildAndSendMail {
-    // tag::buildAndSendMail[]
     public void buildAndSendMail(MailMan m, PersonInformation person,
         Mail mail) {
         // Format the email address
@@ -13,7 +12,6 @@ public class BuildAndSendMail {
         // Send message
         m.send(mId, mail.subject, mMessage);
     }
-    // end::buildAndSendMail[]
 
     @SuppressWarnings("unused")
     private MailMessage formatMessage(String font, String string) {

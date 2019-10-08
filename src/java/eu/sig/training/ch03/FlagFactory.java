@@ -7,7 +7,6 @@ import java.util.List;
 
 public class FlagFactory {
 
-    // tag::getFlag[]
     public List<Color> getFlagColors(Nationality nationality) {
         List<Color> result;
         HashMap<String, List<Color>> nationalityColors = new HashMap<String, List<Color>>();
@@ -24,6 +23,5 @@ public class FlagFactory {
 
         return nationalityColors.get(nationality.toString());
     }
-    // end::getFlag[]
 
 }

@@ -8,7 +8,6 @@ namespace eu.sig.training.ch10
     [TestFixture]
     public class PerfectPictureMoqTest
     {
-        // tag::testNightPictureMockito[]
         [Test]
         public void TestNightPictureMoq()
         {
@@ -20,6 +19,5 @@ namespace eu.sig.training.ch10
             Assert.AreSame(image, new PerfectPicture().TakePerfectPicture(0));
             cameraMock.Verify(foo => foo.FlashLightOn(), Times.AtMostOnce());
         }
-        // end::testNightPictureMockito[]
     }
 }

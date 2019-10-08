@@ -9,7 +9,6 @@ namespace eu.sig.training.ch10
     public class PerfectPictureTest
     {
 
-        // tag::testDayPicture[]
         [Test]
         public void TestDayPicture()
         {
@@ -20,9 +19,6 @@ namespace eu.sig.training.ch10
             PerfectPicture.camera = cameraStub;
             Assert.AreSame(image, new PerfectPicture().TakePerfectPicture(12));
         }
-        // end::testDayPicture[]
-
-        // tag::testNightPicture[]
         [Test]
         public void TestNightPicture()
         {
@@ -34,11 +30,8 @@ namespace eu.sig.training.ch10
             Assert.AreSame(image, new PerfectPicture().TakePerfectPicture(0));
             Assert.AreEqual(1, cameraMock.FlashOnCounter);
         }
-        // end::testNightPicture[]
 
     }
-
-    // tag::DigitalCameraStub[]
     class DigitalCameraStub : ISimpleDigitalCamera
     {
         public Image TestImage;
@@ -56,9 +49,6 @@ namespace eu.sig.training.ch10
         {
         }
     }
-    // end::DigitalCameraStub[]
-
-    // tag::DigitalCameraMock[]
     class DigitalCameraMock : ISimpleDigitalCamera
     {
         public Image TestImage;
@@ -78,5 +68,4 @@ namespace eu.sig.training.ch10
         {
         }
     }
-    // end::DigitalCameraMock[]
 }
