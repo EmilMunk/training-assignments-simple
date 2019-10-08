@@ -9,7 +9,7 @@ public class BoardFactory {
 
         int width = board.getWidth();
         int height = board.getHeight();
-        createBoardDirections(grid, width, height)
+        createBoardDirections(grid, width, height);
         return board;
     }
     // end::createBoard[]
